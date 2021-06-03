@@ -502,6 +502,17 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Mailing_Address_Fields_Are_Required</fullName>
+        <active>true</active>
+        <description>Validates that the contact Mailing Street, Mailing City, and Mailing Country are provided.</description>
+        <errorConditionFormula>OR(
+   ISBLANK( MailingStreet ),
+   ISBLANK( MailingCity ),
+   ISBLANK( MailingCountry )
+)</errorConditionFormula>
+        <errorMessage>Mailing Street, City, and Country are required.</errorMessage>
+    </validationRules>
     <webLinks>
         <fullName>GoogleMaps</fullName>
         <availability>online</availability>
